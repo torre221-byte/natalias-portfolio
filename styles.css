@@ -1,0 +1,8 @@
+body {
+    font-family: sans-serif;
+}
+
+#projects article {
+    background: #eee;
+    margin: 40px;
+}
