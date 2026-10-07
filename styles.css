@@ -1,8 +1,29 @@
+:root{
+    --primary-bg: #f6f0e6;
+    --secondary-bg: #EC4E20; 
+    --primary-text: #4E3822;
+    --secondary: #2176FF; 
+    --standard-gap: 40px;
+    --page-margin: 6rem
+}
+
 body {
-    font-family: sans-serif;
+    font-family:"DM Sans", sans-serif;
+    background: var(--primary-bg);
+    color: var(--primary-text);
+    border-top: 20px solid var(--secondary-bg);
+    margin: 0; 
 }
 
 #projects article {
-    background: #eee;
-    margin: 40px;
+    margin: var(--standard-gap);
+}
+
+h2{
+    font-size: 3em;
+    font-weight: bold;
+}
+
+nav {
+    background: #FDCA40;
 }
