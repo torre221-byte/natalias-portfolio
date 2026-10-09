@@ -107,6 +107,22 @@ header img {
     background: var(--color-brown);
     color: var(--color-yellow);
 }
-nav {
+/* LAYOUT */
+
+main {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: var(--standard-gap) 1.5rem;
+}
+ 
+section {
+    margin-bottom: 4rem;
+}
+ 
+#hero {
+    padding: 2rem;
     background: var(--color-yellow);
+    border: 3px solid var(--color-brown);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
