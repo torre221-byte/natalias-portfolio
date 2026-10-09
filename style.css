@@ -208,3 +208,24 @@ summary {
     cursor: pointer;
     font-weight: 700;
 }
+
+/* Linked in */
+
+a {
+    color: var(--color-blue);
+    text-underline-offset: 3px;
+}
+ 
+a:hover {
+    background: var(--color-yellow);
+    color: var(--color-brown);
+}
+ 
+/* Footer */
+
+footer {
+    background: var(--color-orange);
+    color: var(--color-bg);
+    padding: 2rem var(--page-margin);
+    text-align: center;
+} 
