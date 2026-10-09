@@ -137,7 +137,7 @@ section {
     display: inline-block;
     margin: 0 0.5rem 0.75rem 0;
     padding: 0.4rem 1rem;
-    background: var(--color-white);
+    background: var(--color-bg);
     border: 2px solid var(--color-brown);
     border-radius: 999px;
     font-weight: 700;
@@ -165,6 +165,16 @@ section {
 #skills li:nth-child(even):hover {
     transform: rotate(0deg) translateY(-4px);
     background: var(--color-pink);
-    color: var(--color-white);
+    color: var(--color-bg);
     box-shadow: 4px 4px 0 var(--color-orange);
+}
+
+/* Projects */
+#projects article {
+    margin: var(--standard-gap) 0;
+    padding: 2rem;
+    background: var(--color-bg);
+    border: 3px solid var(--color-brown);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
 }
