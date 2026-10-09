@@ -126,3 +126,45 @@ section {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
 }
+
+/* Skills */
+#skills ul {
+    list-style: none;
+    padding: 0;
+}
+
+#skills li {
+    display: inline-block;
+    margin: 0 0.5rem 0.75rem 0;
+    padding: 0.4rem 1rem;
+    background: var(--color-white);
+    border: 2px solid var(--color-brown);
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: default;
+    transition: transform 0.2s ease, background 0.2s ease,
+                color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#skills li:nth-child(odd) {
+    transform: rotate(-2deg);
+}
+
+#skills li:nth-child(even) {
+    transform: rotate(2deg);
+}
+
+/* Hover: straighten up, lift, and change color */
+#skills li:nth-child(odd):hover {
+    transform: rotate(0deg) translateY(-4px);
+    background: var(--color-yellow);
+    color: var(--color-brown);
+    box-shadow: 4px 4px 0 var(--color-blue);
+}
+
+#skills li:nth-child(even):hover {
+    transform: rotate(0deg) translateY(-4px);
+    background: var(--color-pink);
+    color: var(--color-white);
+    box-shadow: 4px 4px 0 var(--color-orange);
+}
