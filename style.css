@@ -62,3 +62,28 @@ h4 {
     border-bottom: 3px dotted var(--color-pink);
     display: inline-block;
 }
+/* Navigation */
+
+header {
+    padding: 1.5rem var(--page-margin) 0;
+    text-align: center;
+}
+ 
+header img {
+    max-width: 100%;
+    height: auto;
+}
+ 
+#menu {
+    background: var(--color-yellow);
+    border: 3px solid var(--color-brown);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    max-width: 40rem;
+    margin: 1rem auto 0;
+    padding: 0.5rem 1rem;
+}
+
+nav {
+    background: var(--color-yellow);
+}
