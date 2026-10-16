@@ -14,6 +14,7 @@
     --standard-gap: 40px;
     --page-margin: 1rem;
     --content: 52rem;             /* max width of the main content (grows at 1200px) */
+    --page-margin: 1.25rem;
     --radius: 8px;
     --shadow: 5px 5px 0 var(--color-orange);
 }
@@ -87,8 +88,8 @@ header img {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     max-width: 40rem;
-    margin: 1rem auto 0;
-    padding: 0.5rem 1rem;
+    margin: 0 auto;
+    /* keep your background, border, radius, shadow, padding */
 }
  
 /* NAVIGATION (Flexbox): */
@@ -97,6 +98,11 @@ header img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+.wayfinder ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 0.25rem;
     list-style: none;
     margin: 0;
@@ -183,6 +189,8 @@ section {
 }
  
 /* Skills (Flexbox): */
+
+/* Skills */
 #skills ul {
     display: flex;
     flex-wrap: wrap;
