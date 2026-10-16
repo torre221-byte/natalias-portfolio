@@ -8,12 +8,12 @@
     --color-pink: #EB4B98;
     --color-yellow: #FDCA40;
  
- 
     --font-heading: "DM Sans", Arial, sans-serif;
     --font-body: "DM Sans", Arial,  sans-serif;
  
     --standard-gap: 40px;
-    --page-margin: 1rem;          
+    --page-margin: 1rem;
+    --content: 52rem;             /* max width of the main content (grows at 1200px) */
     --radius: 8px;
     --shadow: 5px 5px 0 var(--color-orange);
 }
@@ -81,6 +81,7 @@ header img {
 } 
  
 #menu {
+    width: 100%;
     background: var(--color-yellow);
     border: 3px solid var(--color-brown);
     border-radius: var(--radius);
@@ -120,7 +121,7 @@ header img {
  
 main {
     width: 100%;
-    max-width: 52rem;
+    max-width: var(--content);
     margin: 0 auto;
     padding: var(--standard-gap) 1rem;
 }
@@ -229,15 +230,15 @@ section {
 /* Projects */
  
 /*
-  AI PROMPT (Claude, CSS file only; HTML was not modified):
+  AI PROMPT:
   "Here is my CSS file for a portfolio site. Only edit the CSS. Do not touch the HTML.
   Style the Projects section using CSS Grid. The grid container is the div with class
   .articles, and its children are <article> elements. Use a mobile-first approach with
   min-width media queries. On small screens use one column. At 900px and wider, use two
-  columns where the first article is twice as wide as the second (2fr 1fr). Use the gap
-  property for spacing instead of margins on the articles, and align items to the top of
-  their grid cells so a short card does not stretch to match a tall one. Keep my existing
-  colors, borders, radius and shadow variables."
+  equal columns with the repeat() function. Use the gap property for spacing instead of
+  margins on the articles, and align items to the top of their grid cells so a short
+  card does not stretch to match a tall one. Keep my existing colors, borders, radius
+  and shadow variables."
  
   AI OUTPUT (the code below, through the end of the .articles / article rules):
 */
@@ -256,10 +257,6 @@ section {
     border: 3px solid var(--color-brown);
     border-radius: var(--radius);
     box-shadow: var(--shadow);
-}
- 
-#projects article h3 {
-    font-size: 1.5rem;
 }
 /* END AI-AUTHORED SECTION */
  
@@ -312,6 +309,10 @@ a:hover {
     background: var(--color-yellow);
     color: var(--color-brown);
 }
+
+#logo:hover {
+    background: none;
+}
  
 /* Footer */
  
@@ -327,36 +328,38 @@ footer a {
 }
  
 /* ==========================================================
-   media queries add-ons
+   media queries add-ons with min-widths
    ========================================================== */
  
-/* large phones / small tablets */
-@media (min-width: 600px) {
+/* large phones / small tablets: nav links go from a column to a row */
+@media (min-width: 400px) {
     :root {
-        --page-margin: 2rem;
+        --page-margin: 1.25rem;
     }
  
-    h2 {
-        font-size: 2.25rem;
-    }
- 
-    /* nav becomes a single row */
     .wayfinder ul {
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: center;
     }
- 
-    #hero {
-        padding: 2rem;
+}
+
+/* tablets: more spacing */
+@media (min-width: 768px) {
+    section {
+        margin-bottom: 5rem;
     }
  
-    #projects article {
-        padding: 2rem;
+    #hero {
+        padding: 2.5rem;
+    }
+ 
+    #skills li {
+        padding: 0.5rem 1.25rem;
     }
 }
  
-/* tablets / small laptops */
+/* tablets / small laptops: bigger headings, projects become two columns */
 @media (min-width: 900px) {
     :root {
         --page-margin: 4rem;
@@ -370,33 +373,59 @@ footer a {
         font-size: 2.5rem;
     }
  
-    h3,
-    #projects article h3 {
+    h3 {
         font-size: 2rem;
     }
  
     .articles {
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
     }
 }
- 
-/* desktop: polaroids move to the left corner */
+
+/*
+  AI PROMPT:
+  "my polaroids have way too much space, they are not aligned with the logo, and when
+  I shorten my screen they should go under the logo. What do I do?"
+
+  AI OUTPUT: the header grid below. On small screens the header is not a grid, so the
+  polaroids sit under the logo. At 70rem and up the header becomes a 3-column grid
+  with the polaroids in column 1, the logo in column 2, and the nav across row 2.
+*/
+/* desktop: polaroids move beside the logo */
 @media (min-width: 70rem) {
     :root {
         --page-margin: 6rem;
     }
- 
+
+    header {
+        display: grid;
+        grid-template-columns: 18rem 1fr 18rem;
+        align-items: center;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
     .polaroids {
-        position: absolute;
-        top: 1.5rem;
-        left: var(--page-margin);
+        grid-column: 1;
+        grid-row: 1;
         margin: 0;
+    }
+
+    #logo {
+        grid-column: 2;
+        grid-row: 1;
+        min-width: 0;
+    }
+
+    #menu {
+        grid-column: 1 / -1;
+        grid-row: 2;
     }
 }
  
-/* large desktop */
+/* large desktop: wider content */
 @media (min-width: 1200px) {
-    main {
-        max-width: 64rem;
+    :root {
+        --content: 64rem;
     }
 }
