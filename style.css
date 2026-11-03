@@ -303,11 +303,12 @@ summary {
 a {
     color: var(--color-blue);
     text-underline-offset: 3px;
+    font-weight: bold;
 }
  
 a:hover {
-    background: var(--color-yellow);
-    color: var(--color-brown);
+    background: var(--color-brown);
+    color: var(--color-yellow);
 }
 
 #logo:hover {
