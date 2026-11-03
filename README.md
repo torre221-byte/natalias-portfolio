@@ -10,5 +10,8 @@ This is the portfolio of Natalia Torres, a senior at Michigan State University s
 
 index.html: the website
 CONTENT.md: the written content for each section
-image.png: my logo
-ToMo.png: ToMo's App logo
+images: image.png: my logo
+        mininat1.png: Baby picture of me
+        mininat2.png: Baby picture of me
+        nat.png: Recent picture of me
+        ToMo.png: ToMo's App logo
