@@ -14,10 +14,6 @@
     --standard-gap: 40px;
     --page-margin: 1rem;
     --content: 52rem;             /* max width of the main content (grows at 1200px) */
-<<<<<<< HEAD
-=======
-    --page-margin: 1.25rem;
->>>>>>> 67aa550892ac56d4c9c4370ba11f7f0f773f7c6c
     --radius: 8px;
     --shadow: 5px 5px 0 var(--color-orange);
 }
@@ -96,14 +92,6 @@ header img {
 }
  
 /* NAVIGATION (Flexbox): */
-<<<<<<< HEAD
-=======
-
-.wayfinder ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
->>>>>>> 67aa550892ac56d4c9c4370ba11f7f0f773f7c6c
 
 .wayfinder ul {
     display: flex;
@@ -195,11 +183,6 @@ section {
 }
  
 /* Skills (Flexbox): */
-<<<<<<< HEAD
-=======
-
-/* Skills */
->>>>>>> 67aa550892ac56d4c9c4370ba11f7f0f773f7c6c
 #skills ul {
     display: flex;
     flex-wrap: wrap;
@@ -323,12 +306,8 @@ a {
 }
  
 a:hover {
-    background: var(--color-brown);
-    color: var(--color-yellow);
-}
-
-#logo:hover {
-    background: none;
+    background: var(--color-yellow);
+    color: var(--color-brown);
 }
 
 #logo:hover {
