@@ -5,6 +5,7 @@
     --color-orange : #EC4E20; 
     --color-brown: #4E3822;
     --color-blue : #2176FF;
+    --color-darkblue: #0043AD; 
     --color-pink: #EB4B98;
     --color-yellow: #FDCA40;
  
@@ -13,7 +14,7 @@
  
     --standard-gap: 40px;
     --page-margin: 1rem;
-    --content: 52rem;             /* max width of the main content (grows at 1200px) */
+    --content: 52rem;            
     --radius: 8px;
     --shadow: 5px 5px 0 var(--color-orange);
 }
@@ -301,7 +302,7 @@ summary {
 /* Links */
  
 a {
-    color: var(--color-blue);
+    color: var(--color-darkblue);
     text-underline-offset: 3px;
     font-weight: bold;
 }
@@ -318,7 +319,7 @@ a:hover {
 /* Footer */
  
 footer {
-    background: var(--color-pink);
+    background: var(--color-brown);
     color: var(--color-bg);
     padding: 2rem var(--page-margin);
     text-align: center;
