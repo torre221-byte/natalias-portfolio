@@ -22,8 +22,19 @@ window.onload = function () {
     toggleButton.textContent = isDark ? 'light☀️' : 'dark🌙';
     toggleButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   });
-  ScrollReveal().reveal('#hero h1, #hero p',{delay:500}); 
+  // AI helped me organizing ScrollReveal, I switched #'s and places//
+const sr = ScrollReveal({
+  origin: 'bottom',
+  distance: '30px',
+  duration: 800,
+  easing: 'ease-out'
+});
 
+sr.reveal('#hero', { delay: 200 });                 
+sr.reveal('h2', { origin: 'left' });                 
+sr.reveal('#aboutme p', { interval: 150 });          
+sr.reveal('#projects article', { interval: 200 });   
+sr.reveal('#contact address');                       
 };
 
 
