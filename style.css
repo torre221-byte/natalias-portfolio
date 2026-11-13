@@ -228,6 +228,11 @@ section {
     box-shadow: 4px 4px 0 var(--color-orange);
 }
  
+/* Dark mode */
+body.dark-mode #skills li {
+  color: #4E3822;
+}
+
 /* Projects */
  
 /*
@@ -327,6 +332,11 @@ footer {
  
 footer a {
     color: var(--color-bg);
+}
+
+/* Footer: dark mode */
+body.dark-mode footer {
+  background: var(--color-pink);
 }
  
 /* ==========================================================
@@ -431,3 +441,56 @@ footer a {
         --content: 64rem;
     }
 }
+
+/* Background theme */
+
+body {
+  background-color: #f6f0e6;
+  color: #4E3822;
+}
+body.dark-mode {
+  background-color: #4E3822;
+  color: #f6f0e6;
+} 
+
+/* TOGGLE THEME*/
+#theme-toggle {
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  font-size: 1rem;
+  cursor: pointer;
+  border: 1.5px solid #4E3822;
+  border-radius: 50%;
+  background: #4E3822;
+  color: #f6f0e6;
+}
+
+body.dark-mode #theme-toggle {
+  background: #f6f0e6;
+  border-color: #f6f0e6;
+  color: #4E3822;
+}
+
+/* Dark mode features on portfolio */
+body.dark-mode article,
+body.dark-mode article h3,
+body.dark-mode article h4,
+body.dark-mode article p,
+body.dark-mode article li,
+body.dark-mode article summary,
+body.dark-mode article figcaption {
+  color: #4E3822;
+}
+
+body.dark-mode #aboutme a,
+body.dark-mode #contact a {
+  color: var(--color-blue);
+}
+
+body.dark-mode #aboutme a:hover,
+body.dark-mode #contact a:hover {
+  background: var(--color-yellow);
+  color: var(--color-brown);
+}
+
