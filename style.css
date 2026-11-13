@@ -472,7 +472,7 @@ body.dark-mode #theme-toggle {
   color: #4E3822;
 }
 
-/* Dark mode */
+/* Dark mode features on portfolio */
 body.dark-mode article,
 body.dark-mode article h3,
 body.dark-mode article h4,
@@ -481,5 +481,16 @@ body.dark-mode article li,
 body.dark-mode article summary,
 body.dark-mode article figcaption {
   color: #4E3822;
+}
+
+body.dark-mode #aboutme a,
+body.dark-mode #contact a {
+  color: var(--color-blue);
+}
+
+body.dark-mode #aboutme a:hover,
+body.dark-mode #contact a:hover {
+  background: var(--color-yellow);
+  color: var(--color-brown);
 }
 
