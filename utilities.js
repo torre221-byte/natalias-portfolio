@@ -22,6 +22,8 @@ window.onload = function () {
     toggleButton.textContent = isDark ? 'light☀️' : 'dark🌙';
     toggleButton.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
   });
+  ScrollReveal().reveal('#hero h1, #hero p',{delay:500}); 
+
 };
 
 
